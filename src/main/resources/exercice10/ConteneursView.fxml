@@ -1,2 +1,45 @@
 <?import javafx.scene.layout.BorderPane?>
-<BorderPane></BorderPane>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Button?>
+<BorderPane>
+    <top>
+        <MenuBar>
+            <Menu text="File">
+                <MenuItem text="New"></MenuItem>
+                <MenuItem text="Open"></MenuItem>
+                <MenuItem text="Save"></MenuItem>
+                <MenuItem text="Close"></MenuItem>
+            </Menu>
+            <Menu text="Edit">
+                <MenuItem text="Cut"></MenuItem>
+                <MenuItem text="Copy"></MenuItem>
+                <MenuItem text="Paste"></MenuItem>
+            </Menu>
+            <Menu text="Help">
+            </Menu>
+        </MenuBar>
+    </top>
+    <left>
+        <HBox>
+            <VBox>
+                <Label text="Boutons : "></Label>
+                <Button text="Bouton 1"></Button>
+                <Button text="Bouton 2"></Button>
+                <Button text="Bouton 3"></Button>
+            </VBox>
+            <Separator></Separator>
+        </HBox>
+    </left>
+    <bottom>
+
+    </bottom>
+    <center>
+
+    </center>
+</BorderPane>
