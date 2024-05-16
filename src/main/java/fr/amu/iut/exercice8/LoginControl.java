@@ -3,12 +3,13 @@ package fr.amu.iut.exercice8;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
 
 public class LoginControl extends GridPane {
 
     @FXML
-    private PasswordField Uid;
+    private TextField Uid;
 
     @FXML
     private PasswordField pwd;
