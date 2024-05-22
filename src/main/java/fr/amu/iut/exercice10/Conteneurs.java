@@ -18,6 +18,8 @@ public class Conteneurs extends Application {
         try {
             BorderPane root = FXMLLoader.load(getClass().getClassLoader().getResource("exercice10/ConteneursView.fxml"));
             stage.setScene(new Scene(root));
+            stage.setHeight(600);
+            stage.setWidth(800);
             stage.setTitle("Premier exemple manipulant les conteneurs");
             stage.show();
         } catch (Exception e) {
