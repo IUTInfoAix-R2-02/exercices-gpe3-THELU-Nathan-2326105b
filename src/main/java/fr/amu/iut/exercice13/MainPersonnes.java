@@ -26,7 +26,7 @@ public class MainPersonnes  {
                     System.out.println("Enleve :" + event.getRemoved().get(0).getNom());
                 }
                 else if (event.wasUpdated()) {
-                    System.out.println(event.getList().get(event.getTo()-event.getFrom()).getNom() + " a maintenant " + event.getList().get(event.getTo()-event.getFrom()).getAge().getValue() +  " ans");
+                    System.out.println(event.getList().get(event.getFrom()).getNom() + " a maintenant " + event.getList().get(event.getFrom()).getAge().getValue() +  " ans");
                 }
             }
         };

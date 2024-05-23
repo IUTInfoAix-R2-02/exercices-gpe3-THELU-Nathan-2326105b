@@ -1,4 +1,4 @@
-package fr.amu.iut.exercice4;
+package fr.amu.iut.exercice14;
 
 import javafx.beans.binding.IntegerBinding;
 import javafx.beans.property.IntegerProperty;
@@ -12,14 +12,36 @@ public class MainPersonnes {
     private static SimpleListProperty<Personne> lesPersonnes;
     private static IntegerProperty ageMoyen;
     private static IntegerProperty nbParisiens;
+    private static IntegerProperty taille;
 
-    private static IntegerBinding calculAgeMoyen;
+    private static IntegerBinding calculAgeMoyen ;
     private static IntegerBinding calculnbParisiens;
 
     public static void main(String[] args) {
 
         lesPersonnes = new SimpleListProperty<>(FXCollections.observableArrayList());
         ageMoyen = new SimpleIntegerProperty(0);
+        taille = new SimpleIntegerProperty(lesPersonnes.size());
+        calculAgeMoyen = new IntegerBinding() {
+            {
+                this.bind(lesPersonnes, taille);
+            }
+
+            @Override
+            protected int computeValue() {
+                int moyenne = 0;
+                if (lesPersonnes.size() !=0) {
+                    int age = 0;
+                    int i;
+                    for (i = 0; i < lesPersonnes.size(); i += 1) {
+                        age += lesPersonnes.get(i).getAge();
+                    }
+                    moyenne = age / lesPersonnes.size();
+                }
+                return moyenne;
+            }
+        };
+        ageMoyen.bind(calculAgeMoyen);
 
         question1();
 //        question2();
