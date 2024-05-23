@@ -94,8 +94,6 @@ public class Palette extends Application {
         setMessage(rouge.getText());
         nbRouge+=1;
         setNbFois(nbRouge);
-        /*texteDuBas.setText("Rouge est une jolie couleur");
-        texteDuBas.setTextFill(Color.web("#FF0000FF"));*/
     }
     private void greenButtonClick(Event event) {
         setCouleurPanneau("-fx-background-color: green");
