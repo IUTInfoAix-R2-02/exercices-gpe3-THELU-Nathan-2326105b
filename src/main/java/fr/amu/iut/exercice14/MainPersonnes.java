@@ -17,7 +17,7 @@ public class MainPersonnes {
 
     public static void main(String[] args) {
 
-        lesPersonnes = new SimpleListProperty<>(FXCollections.observableArrayList(personne -> new Observable[] {personne.ageProperty()}));
+        lesPersonnes = new SimpleListProperty<>(FXCollections.observableArrayList(personne -> new Observable[] {personne.ageProperty(), personne.villeDeNaissanceProperty()}));
         ageMoyen = new SimpleIntegerProperty(0);
         calculAgeMoyen = new IntegerBinding() {
             {
@@ -38,7 +38,6 @@ public class MainPersonnes {
                 return moyenne;
             }
         };
-        lesPersonnes = new SimpleListProperty<>(FXCollections.observableArrayList(personne -> new Observable[] {personne.villeDeNaissanceProperty()}));
         ageMoyen.bind(calculAgeMoyen);
 
         nbParisiens = new SimpleIntegerProperty(0);
